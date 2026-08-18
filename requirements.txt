@@ -1,0 +1,6 @@
+faster-whisper==1.2.1
+ctranslate2==4.8.1
+jiwer==4.0.0
+soundfile==0.14.0
+nvidia-ml-py==13.580.82
+psutil==7.0.0

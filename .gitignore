@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+data/
+models/
+logs/
+evidence/baselines/
+evidence/candidates/
+evidence/confirmations/
+evidence/data/
+evidence/environment/
+evidence/model/
+evidence/profiles/

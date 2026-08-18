@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Whisper inference benchmark</title>
+  <desc id="desc">Bar chart showing throughput improving by 46 percent, from 46 to 67 hours of audio processed per hour, without increasing transcription errors on LibriSpeech test-clean.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081322"/>
+      <stop offset="1" stop-color="#11213a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#43d9ad"/>
+      <stop offset="1" stop-color="#49a7ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1120" cy="40" r="180" fill="#49a7ff" opacity="0.06"/>
+  <text x="70" y="92" fill="#9fb1c8" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="650" letter-spacing="1.5">WHISPER INFERENCE</text>
+  <text x="1130" y="100" fill="#43d9ad" font-family="Inter,Arial,sans-serif" font-size="58" font-weight="800" text-anchor="end">+46%</text>
+
+  <text x="70" y="223" fill="#aebdd0" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="650">Before</text>
+  <rect x="230" y="180" width="554" height="62" rx="14" fill="#40536d"/>
+  <text x="810" y="224" fill="#f4f8ff" font-family="Inter,Arial,sans-serif" font-size="32" font-weight="750">46 hours</text>
+
+  <text x="70" y="353" fill="#f4f8ff" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="650">After</text>
+  <rect x="230" y="310" width="808" height="62" rx="14" fill="url(#accent)"/>
+  <text x="1064" y="354" fill="#f4f8ff" font-family="Inter,Arial,sans-serif" font-size="32" font-weight="750">67 hours</text>
+
+  <text x="230" y="421" fill="#8fa4be" font-family="Inter,Arial,sans-serif" font-size="21">hours of audio processed per hour</text>
+  <rect x="70" y="488" width="490" height="58" rx="29" fill="#173a3a" stroke="#43d9ad" stroke-opacity="0.75"/>
+  <text x="315" y="526" fill="#64e3bd" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" text-anchor="middle">TRANSCRIPTION ERRORS DID NOT INCREASE</text>
+</svg>

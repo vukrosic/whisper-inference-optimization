@@ -1,0 +1,30 @@
+{
+  "model": "faster-whisper large-v3-turbo",
+  "workload": "LibriSpeech test-clean",
+  "utterances": 2620,
+  "audio_seconds": 19452.480625,
+  "baseline": {
+    "configuration": "float16, one worker, serial",
+    "audio_hours_processed_per_hour": 46.0244,
+    "utterances_per_second": 6.199,
+    "peak_gpu_allocation_gb": 3.100,
+    "word_error_rate_percent": 2.6186,
+    "total_edits": 1391,
+    "failures": 0
+  },
+  "optimized": {
+    "configuration": "int8_float16, two workers, concurrency four",
+    "audio_hours_processed_per_hour": 67.3148,
+    "utterances_per_second": 9.066,
+    "peak_gpu_allocation_gb": 2.437,
+    "word_error_rate_percent": 2.5753,
+    "total_edits": 1368,
+    "failures": 0
+  },
+  "change": {
+    "throughput_percent": 46.2590,
+    "wall_time_percent": -31.6281,
+    "peak_gpu_allocation_percent": -21.38
+  },
+  "quality_boundary": "The strict no-increase gate passed on test-clean. Test-other is reported separately as a bounded quality tradeoff."
+}

@@ -12,5 +12,4 @@ Promoted role: serial throughput/latency incumbent.
 - Peak device allocation: 3,099,721,728 → 2,059,534,336 bytes.
 - Quality: 1,391 → 1,368 edits; WER 2.6186% → 2.5753%; zero failures.
 
-Claim boundary: quality-evaluated whole-system result for pinned faster-whisper/CTranslate2, pinned turbo snapshot, RTX 3090, and frozen LibriSpeech test-clean. It is not a novel-kernel claim and does not establish universal ASR quality.
-
+Claim boundary: quality-evaluated whole-system result for pinned faster-whisper/CTranslate2, the pinned turbo snapshot, the reference CUDA GPU, and frozen LibriSpeech test-clean. It is not a novel-kernel claim and does not establish universal hardware performance or universal ASR quality.

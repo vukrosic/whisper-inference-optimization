@@ -17,4 +17,4 @@ Promoted role: concurrent-serving incumbent at bounded closed-loop concurrency 4
 - Batch-one quality receipt: SHA-256 `c515de85f0a56c82b2fffb06394508e96eb3ae5be8a9127c64be0fde683f320a`.
 - Candidate harness SHA-256: `25c09d932e366da3f3ed23408e25f5c8b037257e0af3318c95f91bcaed434b4a`.
 
-Claim boundary: quality-evaluated whole-system concurrent result for the pinned faster-whisper/CTranslate2 stack, pinned turbo snapshot, one RTX 3090, bounded concurrency 4, and frozen LibriSpeech test-clean. It is a supported integrated-runtime configuration result, not a novel kernel or universal ASR-quality claim.
+Claim boundary: quality-evaluated whole-system concurrent result for the pinned faster-whisper/CTranslate2 stack, pinned turbo snapshot, the reference CUDA GPU, bounded concurrency 4, and frozen LibriSpeech test-clean. It is a supported integrated-runtime configuration result, not a novel kernel, a universal hardware result, or a universal ASR-quality claim.

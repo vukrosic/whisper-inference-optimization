@@ -1,8 +1,8 @@
-# RTX 3090 Whisper serving portfolio case
+# Whisper serving portfolio case
 
 ## Outcome
 
-On one RTX 3090, a pinned faster-whisper 1.2.1 / CTranslate2 4.8.1 deployment of the pinned `turbo` model snapshot was improved from 46.0244x to 67.3148x real time on all 2,620 LibriSpeech test-clean utterances. The promoted configuration uses supported `int8_float16` compute and two stock model workers under bounded closed-loop concurrency four.
+On the reference CUDA GPU, a pinned faster-whisper 1.2.1 / CTranslate2 4.8.1 deployment of the pinned `turbo` model snapshot was improved from 46.0244x to 67.3148x real time on all 2,620 LibriSpeech test-clean utterances. The promoted configuration uses supported `int8_float16` compute and two stock model workers under bounded closed-loop concurrency four. The implementation is portable across compatible NVIDIA CUDA GPUs, but the measured throughput and optimal concurrency are hardware-specific.
 
 The combined result is +46.2590% throughput and 31.6281% less wall time versus immutable serial FP16 B0. It has zero failed requests, 21.38% lower measured GPU peak allocation, and better finite-oracle quality on test-clean: 1,368 edits / 2.5753% WER versus 1,391 / 2.6186%. This strict result is limited to the frozen primary workload, not a universal quality or novel-kernel claim.
 
@@ -66,7 +66,7 @@ These failures are preserved in `state/inference-traces.jsonl` and `docs/FAILURE
 Run only on the project-owned GPU after confirming it is process-idle:
 
 ```bash
-PROJECT=/workspace/whisper-large-v3-turbo-rtx3090-serving
+PROJECT=/path/to/whisper-inference-optimization
 sha256sum "$PROJECT/evidence/data/librispeech-test-clean-v1.json" \
   "$PROJECT/candidates/WSP-004/run_concurrent.py"
 

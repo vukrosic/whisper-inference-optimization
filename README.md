@@ -1,6 +1,6 @@
-# Whisper large-v3-turbo inference optimization on RTX 3090
+# Whisper large-v3-turbo inference optimization
 
-An evidence-backed optimization of the official `faster-whisper` serving path on one NVIDIA RTX 3090. The benchmark freezes the model snapshot, LibriSpeech workload, decode semantics, evaluator, and promotion gates before comparing candidates.
+An evidence-backed optimization of the official `faster-whisper` serving path. The implementation targets compatible NVIDIA CUDA GPUs; exact throughput and the best worker/concurrency settings must be measured per device. The benchmark freezes the model snapshot, LibriSpeech workload, decode semantics, evaluator, and promotion gates before comparing candidates.
 
 ![Benchmark summary](docs/assets/benchmark-summary.png)
 
@@ -53,7 +53,7 @@ The scripts derive the repository root automatically. Set `PROJECT=/your/path` o
 
 ## Scope
 
-- GPU: NVIDIA RTX 3090 24 GB
+- Reference environment: one NVIDIA CUDA GPU with 24 GB memory
 - Model: pinned faster-whisper `large-v3-turbo` snapshot
 - Primary dataset: official LibriSpeech `test-clean`, 19,452.48 audio seconds
 - Primary metric: audio seconds divided by measured wall seconds

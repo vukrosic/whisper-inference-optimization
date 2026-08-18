@@ -6,7 +6,7 @@ The exact model snapshot, LibriSpeech archive and per-file manifest, dependency 
 
 ## Product question
 
-Can stock faster-whisper serving mechanisms improve warm English ASR throughput on one RTX 3090 while preserving the immutable FP16 baseline's full LibriSpeech WER and total edit distance, without materially harming batch-one latency?
+Can stock faster-whisper serving mechanisms improve warm English ASR throughput on the reference CUDA GPU while preserving the immutable FP16 baseline's full LibriSpeech WER and total edit distance, without materially harming batch-one latency?
 
 ## Frozen identities
 
@@ -16,7 +16,7 @@ Can stock faster-whisper serving mechanisms improve warm English ASR throughput 
 - CTranslate2: `4.8.1`, tag commit `0d8bcd362ac75ef860ef161d6f0efad0ae439ff0`.
 - Resolved model Hub snapshot: canonical `dropbox-dash/faster-whisper-large-v3-turbo`, revision `0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf`, ungated, MIT. The official alias above remains the requested identity. Selected file SHA-256 hashes are in `evidence/model/files.sha256`; `model.bin` is `e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da`.
 - Dataset: official OpenSLR SLR12 LibriSpeech `test-clean`, archive `test-clean.tar.gz`, published/verified MD5 `32fa31d27d2e1cad72775fee3f4849a9`, archive SHA-256 `39fde525e59672dc6d1551919b1478f724438a95aa55f874b576be21967e6c23`, CC BY 4.0. `test-other` is prohibited until a speed winner survives full `test-clean`.
-- Hardware: NVIDIA RTX 3090 24,576 MiB; driver 595.84; CUDA toolkit 12.8.93; Ryzen 7 2700X 8c/16t; 31 GiB RAM. Provider-specific device identifiers are intentionally omitted from this public copy.
+- Hardware: NVIDIA CUDA GPU with 24,576 MiB; driver 595.84; CUDA toolkit 12.8.93; Ryzen 7 2700X 8c/16t; 31 GiB RAM. The implementation is not restricted to this reference device; other compatible GPUs require fresh timing and configuration selection.
 - Experiment root: an isolated project directory on a non-persistent GPU container. The provider endpoint is intentionally omitted from this public copy.
 
 ## Workload

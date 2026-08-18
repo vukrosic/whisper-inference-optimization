@@ -28,7 +28,7 @@ Concurrent latency includes service plus queue delay for the bounded four-reques
 - The evaluator is candidate-independent. Full promotion requires no increase in corpus WER or edit distance, zero failures, at least 5% paired primary-throughput gain, and batch-one p50/p95 regressions no worse than 3%/5%.
 - WSP-004 used three bounded AB/BA/AB blocks against a matched workers=1/concurrency=4 control. Its mechanism-only throughput ratios were 1.1446, 1.1383, and 1.1310; median +13.8333%.
 
-The complete frozen contract is `docs/ACTIVE-CONTRACT.md`; immutable receipt hashes are in `candidates/WSP-005/PROMOTION.md` and `candidates/WSP-004/PROMOTION.md`.
+The complete frozen contract is `docs/BENCHMARK-CONTRACT.md`; immutable receipt hashes are in `candidates/WSP-005/PROMOTION.md` and `candidates/WSP-004/PROMOTION.md`.
 
 ## Cost-capacity proxy
 

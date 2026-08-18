@@ -15,6 +15,9 @@ On all 2,620 LibriSpeech `test-clean` utterances, the promoted configuration inc
 
 This is a finite-workload result, not a universal quality claim. On the harder predeclared `test-other` set, throughput improves 42.67% but WER rises by 0.03961 percentage points. That result is kept as a transparent quality-budget frontier and does not pass the strict no-increase gate.
 
+WER means word error rate: the percentage of reference words that were
+substituted, deleted, or incorrectly inserted in the transcript.
+
 ## What changed
 
 - Switched to a supported quantized CTranslate2 compute path.
@@ -29,7 +32,7 @@ No custom CUDA kernel or model retraining is claimed.
 The setup script pins `faster-whisper==1.2.1`, `ctranslate2==4.8.1`, the exact model revision, and the official OpenSLR archive checksum. Model and dataset downloads happen directly on the GPU.
 
 ```bash
-bash scripts/setup_remote.sh
+bash scripts/setup.sh
 bash scripts/run_wsp005_pairs.sh
 bash scripts/run_wsp005_full_b.sh
 bash scripts/run_wsp004_pairs_v2.sh
@@ -41,7 +44,7 @@ The scripts derive the repository root automatically. Set `PROJECT=/your/path` o
 ## Evidence map
 
 - [`docs/PORTFOLIO-CASE.md`](docs/PORTFOLIO-CASE.md) — full result, economics proxy, tradeoffs, and reproduction map
-- [`docs/ACTIVE-CONTRACT.md`](docs/ACTIVE-CONTRACT.md) — frozen experiment contract
+- [`docs/BENCHMARK-CONTRACT.md`](docs/BENCHMARK-CONTRACT.md) — frozen experiment contract
 - [`docs/TEST-OTHER-CONFIRMATION.md`](docs/TEST-OTHER-CONFIRMATION.md) — harder-set generalization and quality boundary
 - [`docs/FAILURE-INDEX.md`](docs/FAILURE-INDEX.md) — preserved negative and unsupported candidates
 - [`evidence/inference-traces.jsonl`](evidence/inference-traces.jsonl) — append-only experiment history

@@ -1,6 +1,6 @@
-# Active speech-inference optimization contract
+# Frozen speech-inference benchmark contract
 
-Status: **FROZEN v1 — 2026-08-18 — immutable baseline qualification active; candidate execution locked until B0 receipts pass**
+Status: **FROZEN v1 — 2026-08-18 — preserved historical contract for the completed experiment**
 
 The exact model snapshot, LibriSpeech archive and per-file manifest, dependency lock, evaluator, runner, normalization, baseline configuration, metrics, and promotion rules are frozen. No WSP candidate may run until B0 produces three valid deterministic development receipts.
 
